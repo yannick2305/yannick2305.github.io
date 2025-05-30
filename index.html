@@ -48,17 +48,22 @@
     }
 
     .white-box {
+      width: 100%;
       background-color: rgba(255, 255, 255, 0.95);
-      color: #111;
-      width: 90%;
+      padding: 2rem 0;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+    }
+
+    .inner-content {
+      width: 100%;
       max-width: 800px;
-      padding: 2rem;
+      margin: 0 auto;
+      padding: 0 2rem;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       align-items: center;
-      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
-      box-sizing: border-box;
-      border-radius: 10px;
     }
 
     .info-row {
@@ -173,34 +178,36 @@
 
   <div class="content-wrapper">
     <div class="white-box">
-      <!-- Text and image side by side on desktop -->
-      <div class="info-row">
-        <div class="description-box">
-          <h2>My Interests:</h2>
+      <div class="inner-content">
+        <!-- Text and image side by side on desktop -->
+        <div class="info-row">
+          <div class="description-box">
+            <h2>My Interests:</h2>
+            <p>
+              I am a mathematics student with a strong interest in the propagation of waves in periodic media. I used Layer potential techniques to derive solutions for the Helmholtz scattering problem. Other interests of mine are in the spectral analysis of Toeplitz operators.
+            </p>
+          </div>
+          <img src="Images/MyPicture.png" alt="Yannick De Bruijn" class="selfie" />
+        </div>
+
+        <!-- Buttons below -->
+        <div class="buttons-box">
+          <a href="research.html" class="btn">My Research</a>
+          <a href="https://github.com/yannick2305" target="_blank" rel="noopener noreferrer" class="btn">My Code Repositories</a>
+        </div>
+
+        <!-- Contact info below buttons -->
+        <div class="contact-box">
+          <h3>Contact</h3>
           <p>
-            I am a mathematics student with a strong interest in the propagation of waves in periodic media. I used Layer potential techniques to derive solutions for the Helmholtz scattering problem. Other interests of mine are in the spectral analysis of Toeplitz operators.
+            ETH Zurich<br />
+            Rämistrasse 101<br />
+            8092 Zurich<br />
+            Switzerland<br />
+            Office: HG J48<br />
+            Email: <a href="mailto:ydebruijn@student.ethz.ch">ydebruijn@student.ethz.ch</a>
           </p>
         </div>
-        <img src="Images/MyPicture.png" alt="Yannick De Bruijn" class="selfie" />
-      </div>
-
-      <!-- Buttons below -->
-      <div class="buttons-box">
-        <a href="research.html" class="btn">My Research</a>
-        <a href="https://github.com/yannick2305" target="_blank" rel="noopener noreferrer" class="btn">My Code Repositories</a>
-      </div>
-
-      <!-- Contact info below buttons -->
-      <div class="contact-box">
-        <h3>Contact</h3>
-        <p>
-          ETH Zurich<br />
-          Rämistrasse 101<br />
-          8092 Zurich<br />
-          Switzerland<br />
-          Office: HG J48<br />
-          Email: <a href="mailto:ydebruijn@student.ethz.ch">ydebruijn@student.ethz.ch</a>
-        </p>
       </div>
     </div>
   </div>

@@ -11,10 +11,10 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
       overflow: hidden;
-      background: black; /* fallback */
+      background: url('Images/HannertTheis.png') no-repeat center center fixed;
+      background-size: cover;
     }
 
-    /* Dark overlay to improve text visibility */
     body::before {
       content: "";
       position: fixed;
@@ -23,7 +23,6 @@
       z-index: -1;
     }
 
-    /* Address box top right */
     .address-box {
       position: fixed;
       top: 20px;
@@ -40,20 +39,14 @@
       text-shadow: 0 0 4px rgba(0,0,0,0.7);
     }
 
-    /* Container for the entire page, vertical flex layout */
     body {
       display: flex;
       flex-direction: column;
       height: 100vh;
-      box-sizing: border-box;
     }
 
-    /* Top half: name centered horizontally near top */
     .top-half {
-      position: relative;
       height: 50vh;
-      background: url('Images/HannertTheis.png') no-repeat center top;
-      background-size: cover;
       display: flex;
       justify-content: center;
       align-items: flex-start;
@@ -69,54 +62,39 @@
       z-index: 1;
     }
 
-    /* Bottom half: same image but showing bottom half only */
     .bottom-half {
-      position: relative;
       height: 50vh;
-      background: url('Images/HannertTheis.png') no-repeat center bottom;
-      background-size: cover;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
-      padding: 0 40px;
-      box-sizing: border-box;
-    }
-
-    /* Overlay on bottom half for contrast */
-    .bottom-half::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0,0,0,0.6);
-      z-index: 0;
-    }
-
-    /* Content inside bottom half, above overlay */
-    .bottom-content {
       position: relative;
-      z-index: 1;
-      width: 100%;
+    }
+
+    .white-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #111;
+      width: 90%;
+      max-width: 1000px;
+      height: 80%;
+      border-radius: 16px;
+      padding: 2rem 3rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: white;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
     }
 
-    /* Left textbox */
     .description-box {
-      max-width: 45%;
       font-size: 1.3rem;
-      line-height: 1.5;
-      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
+      line-height: 1.6;
+      max-width: 50%;
     }
 
-    /* Right buttons container */
     .buttons {
-      max-width: 45%;
       display: flex;
-      gap: 2rem;
-      justify-content: flex-end;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 1.5rem;
+      justify-content: center;
     }
 
     .btn {
@@ -124,35 +102,34 @@
       border: none;
       border-radius: 12px;
       padding: 1.2rem 2.5rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: bold;
       color: white;
       cursor: pointer;
       box-shadow: 0 6px 15px rgba(10, 147, 150, 0.6);
       transition: background-color 0.3s ease, transform 0.2s ease;
       text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-width: 220px;
+      text-align: center;
     }
 
     .btn:hover {
       background-color: #005f66;
-      transform: scale(1.1);
+      transform: scale(1.05);
     }
 
-    /* Responsive adjustment */
     @media (max-width: 700px) {
-      .bottom-content {
+      .white-box {
         flex-direction: column;
         gap: 1.5rem;
+        text-align: center;
       }
       .description-box, .buttons {
         max-width: 100%;
-        justify-content: center !important;
       }
       .buttons {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
         gap: 1rem;
       }
     }
@@ -172,13 +149,16 @@
   </div>
 
   <div class="bottom-half">
-    <div class="bottom-content">
+    <div class="white-box">
       <div class="description-box">
-        <p>Mathematics student.</p>
+        <p>
+          I am a mathematics student with a strong interest in analysis, geometry, and scientific computing. 
+          My work focuses on connecting theory with practical applications.
+        </p>
       </div>
       <div class="buttons">
-        <a href="research.html" class="btn" role="button">My Research</a>
-        <a href="https://github.com/yannick2305" target="_blank" rel="noopener noreferrer" class="btn" role="button">My Code Repositories</a>
+        <a href="research.html" class="btn">My Research</a>
+        <a href="https://github.com/yannick2305" target="_blank" rel="noopener noreferrer" class="btn">My Code Repositories</a>
       </div>
     </div>
   </div>

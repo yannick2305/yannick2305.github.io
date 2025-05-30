@@ -2,62 +2,85 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Yannick2305</title>
   <style>
-    body {
+    /* Full-page background image */
+    body, html {
       margin: 0;
       padding: 0;
+      height: 100%;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(to right, #4facfe, #00f2fe);
       color: white;
+      background: url('Images/HannertTheis.png') no-repeat center center fixed;
+      background-size: cover;
       display: flex;
-      align-items: center;
+      flex-direction: column;
       justify-content: center;
-      height: 100vh;
+      align-items: center;
       text-align: center;
+      overflow: hidden;
     }
 
-    .container {
-      max-width: 600px;
-      padding: 20px;
-      background-color: rgba(0, 0, 0, 0.4);
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    /* Dark overlay for readability */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
     }
 
     h1 {
-      font-size: 3em;
-      margin-bottom: 10px;
+      font-size: 4rem;
+      margin-bottom: 0.2rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
 
     p {
-      font-size: 1.2em;
+      font-size: 1.3rem;
+      margin: 0 0 2rem 0;
+      max-width: 600px;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     }
 
-    .button {
-      margin-top: 20px;
-      padding: 10px 20px;
-      font-size: 1em;
-      color: #00f2fe;
-      background-color: white;
+    .buttons {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .btn {
+      background-color: #0a9396;
       border: none;
-      border-radius: 8px;
+      border-radius: 12px;
+      padding: 1.2rem 2.5rem;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
       cursor: pointer;
-      transition: 0.3s;
+      box-shadow: 0 6px 15px rgba(10, 147, 150, 0.6);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 220px;
     }
 
-    .button:hover {
-      background-color: #f0f0f0;
-      transform: scale(1.05);
+    .btn:hover {
+      background-color: #005f66;
+      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Welcome to My Website</h1>
-    <p>This is a simple intro page hosted with GitHub Pages.</p>
-    <button class="button" onclick="window.location.href='research.html'">My research</button>
+  <h1>Yannick2305</h1>
+  <p>Researcher and developer passionate about science and open source projects.</p>
+  <div class="buttons">
+    <a href="research.html" class="btn" role="button">My Research</a>
+    <a href="https://github.com/yannick2305" target="_blank" rel="noopener noreferrer" class="btn" role="button">My Code Repositories</a>
   </div>
 </body>
 </html>

@@ -5,22 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Yannick2305</title>
   <style>
-    /* Full-page background image */
-  body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white;
-  background: url('Images/HannertTheis.png') no-repeat center top fixed;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  overflow: hidden;
-  }
+    /* Full-page background image focusing on top */
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      background: url('Imags/HannertTheis.png') no-repeat center top fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start; /* align content at top */
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+      padding-top: 10vh; /* push content down a bit from very top */
+    }
 
     /* Dark overlay for readability */
     body::before {
@@ -39,7 +40,7 @@
 
     p {
       font-size: 1.3rem;
-      margin: 0 0 2rem 0;
+      margin: 0 0 3rem 0;
       max-width: 600px;
       text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     }
@@ -49,6 +50,7 @@
       gap: 2rem;
       flex-wrap: wrap;
       justify-content: center;
+      margin-bottom: 30vh; /* so content stays in top half */
     }
 
     .btn {

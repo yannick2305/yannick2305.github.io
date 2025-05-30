@@ -3,27 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Yannick De Bruijn</title>
+  <title>Yannick2305</title>
   <style>
-    /* Full-page background image focusing on top */
-    body, html {
-      margin: 0;
-      padding: 0;
+    html, body {
       height: 100%;
+      margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
-      background: url('Images/HannertTheis.png') no-repeat center top fixed;
+      background: url('image/HannertTheis.png') no-repeat center center fixed;
       background-size: cover;
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start; /* align content at top */
-      align-items: center;
-      text-align: center;
       overflow: hidden;
-      padding-top: 10vh; /* push content down a bit from very top */
     }
 
-    /* Dark overlay for readability */
+    /* Dark overlay to improve text visibility */
     body::before {
       content: "";
       position: fixed;
@@ -32,16 +24,38 @@
       z-index: -1;
     }
 
+    /* Flex container to place content in top half */
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; /* align to top */
+      height: 100vh;
+      padding-top: 5vh;
+      box-sizing: border-box;
+    }
+
+    .content-wrapper {
+      max-width: 700px;
+      width: 100%;
+      height: 50vh; /* top half of viewport */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* vertically center inside top half */
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+    }
+
     h1 {
       font-size: 4rem;
-      margin-bottom: 0.2rem;
+      margin: 0 0 0.2rem 0;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
     }
 
     p {
       font-size: 1.3rem;
-      margin: 0 0 3rem 0;
-      max-width: 600px;
+      margin: 0 0 2.5rem 0;
       text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     }
 
@@ -50,7 +64,7 @@
       gap: 2rem;
       flex-wrap: wrap;
       justify-content: center;
-      margin-bottom: 30vh; /* so content stays in top half */
+      width: 100%;
     }
 
     .btn {
@@ -78,11 +92,13 @@
   </style>
 </head>
 <body>
-  <h1>Yannick2305</h1>
-  <p>Mathematics student.</p>
-  <div class="buttons">
-    <a href="research.html" class="btn" role="button">My Research</a>
-    <a href="https://github.com/yannick2305" target="_blank" rel="noopener noreferrer" class="btn" role="button">My Code Repositories</a>
+  <div class="content-wrapper">
+    <h1>Yannick2305</h1>
+    <p>Researcher and developer passionate about science and open source projects.</p>
+    <div class="buttons">
+      <a href="research.html" class="btn" role="button">My Research</a>
+      <a href="https://github.com/yannick2305" target="_blank" rel="noopener noreferrer" class="btn" role="button">My Code Repositories</a>
+    </div>
   </div>
 </body>
 </html>

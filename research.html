@@ -23,8 +23,8 @@
       padding: 0;
     }
     li {
-      margin-bottom: 20px;
-      padding: 15px;
+      margin-bottom: 30px;
+      padding: 20px;
       background: white;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -33,6 +33,7 @@
       color: #0a9396;
       text-decoration: none;
       font-weight: bold;
+      margin-right: 15px;
     }
     a:hover {
       text-decoration: underline;
@@ -40,10 +41,18 @@
     .authors {
       font-style: italic;
       color: #555;
+      margin-top: 5px;
     }
-    .year {
-      float: right;
+    .year-journal {
+      margin-top: 5px;
       color: #888;
+    }
+    .description {
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+    .links {
+      margin-top: 10px;
     }
   </style>
 </head>
@@ -51,18 +60,30 @@
   <h1>My Research Papers</h1>
   <ul>
     <li>
-      <a href="https://example.com/paper1.pdf" target="_blank" rel="noopener noreferrer">Title of Paper 1</a>
-      <span class="year">2024</span>
+      <div>
+        <strong>Title of Paper 1</strong>
+        <span class="year-journal">2024, <em>Journal of Example Studies</em></span>
+      </div>
       <div class="authors">Yannick, Coauthor A., Coauthor B.</div>
-      <p>Brief description or abstract of paper 1 goes here.</p>
+      <p class="description">Brief description or abstract of paper 1 goes here.</p>
+      <div class="links">
+        <a href="https://example.com/paper1.pdf" target="_blank" rel="noopener noreferrer">Published Paper</a>
+        <a href="https://arxiv.org/abs/1234.5678" target="_blank" rel="noopener noreferrer">Preprint</a>
+      </div>
     </li>
     <li>
-      <a href="https://example.com/paper2.pdf" target="_blank" rel="noopener noreferrer">Title of Paper 2</a>
-      <span class="year">2023</span>
+      <div>
+        <strong>Title of Paper 2</strong>
+        <span class="year-journal">2023</span>
+      </div>
       <div class="authors">Yannick, Coauthor C.</div>
-      <p>Brief description or abstract of paper 2 goes here.</p>
+      <p class="description">Brief description or abstract of paper 2 goes here.</p>
+      <div class="links">
+        <a href="https://example.com/paper2.pdf" target="_blank" rel="noopener noreferrer">Published Paper</a>
+        <a href="https://arxiv.org/abs/2345.6789" target="_blank" rel="noopener noreferrer">Preprint</a>
+      </div>
     </li>
-    <!-- Add more papers as needed -->
+    <!-- Add more papers below -->
   </ul>
 </body>
 </html>

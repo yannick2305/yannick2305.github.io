@@ -24,18 +24,19 @@
     }
 
     .address-box {
-      position: fixed;
+      position: absolute; /* or relative */
       top: 20px;
       right: 20px;
-      color: white;
-      font-size: 1.5rem;
+      font-size: 0.9rem;
       line-height: 1.4;
+      background: rgba(255, 255, 255, 0.15); /* semi-transparent */
+      padding: 10px;
+      border-radius: 8px;
+      color: white;
       text-align: left;
-      background: transparent;
-      padding: 0;
-      border: none;
-      z-index: 10;
-      text-shadow: 0 0 4px rgba(0,0,0,0.7);
+      max-width: 200px;
+      z-index: 2;
+      text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
     }
 
     body {
@@ -174,6 +175,7 @@
   </style>
 </head>
 <body>
+  <div class="top-half">
   <div class="address-box">
     <p>
       ETH Zurich <br />
@@ -184,6 +186,8 @@
       Email: ydebruijn@student.ethz.ch
     </p>
   </div>
+  <h1>Yannick De Bruijn</h1>
+</div>
 
   <div class="top-half">
     <h1>Yannick De Bruijn</h1>

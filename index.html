@@ -177,16 +177,19 @@
       color: #111 !important;
     }
 
-  @media (max-width: 700px) {
-    .top-half {
-      height: 50vh;           /* fixed height */
-      padding-top: 0 !important;  /* override any padding */
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
-      text-align: center;
-    }
+ @media (max-width: 700px) {
+  .top-half {
+    height: 50vh;
+    padding-top: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    padding-bottom: 150px; /* add enough space for white box */
+    box-sizing: border-box;
   }
+}
+
 
 
     

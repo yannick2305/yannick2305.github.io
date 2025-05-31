@@ -125,28 +125,24 @@
     }
 
     .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: flex-end;
-    background: rgba(0, 0, 0, 0.6); /* slightly darker for readability */
-    z-index: 1000;
-    box-sizing: border-box;
-    backdrop-filter: blur(4px); /* optional: soft blur effect */
-  }
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(0, 0, 0, 0.3); /* optional semi-transparent bg */
+      box-sizing: border-box;
+    }
     
     .nav-container a {
-      color: #fff;
-      text-decoration: none;
       margin-left: 2rem;
-      font-weight: bold;
-      transition: color 0.2s ease;
+      font-size: 1rem;
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
     }
     
     .nav-container a:hover {
-      color: #0a9396;
+      text-decoration: underline;
     }
 
 
@@ -242,18 +238,16 @@
 </head>
 <body>
 
-  <nav class="navbar">
-  <div class="nav-container">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="research.html">Research</a>
+<div class="top-half">
+  <div class="navbar">
+    <div class="nav-container">
+      <a href="index.html">Home</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+    </div>
   </div>
-</nav>
-
-
-  <div class="top-half">
-    <h1>Yannick De Bruijn</h1>
-  </div>
+  <h1>Yannick De Bruijn</h1>
+</div>
 
   <div class="content-wrapper">
     <div class="white-box">

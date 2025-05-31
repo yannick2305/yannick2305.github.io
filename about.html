@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About – Yannick De Bruijn</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('Images/HannertTheis2.png') no-repeat center center fixed;
+      background-size: cover;
+      overflow-x: hidden;
+      color: white;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    .top-header {
+      height: 33vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .top-header h1 {
+      font-size: 3rem;
+      margin: 0;
+      padding: 0 20px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    }
+
+    .content-wrapper {
+      margin-top: -100px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+
+    .white-box {
+      width: 100%;
+      background-color: rgba(255, 255, 255, 0.95);
+      padding: 3rem 1rem;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
+      box-sizing: border-box;
+      min-height: 60vh;
+    }
+
+    .inner-content {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #111;
+      font-size: 1.2rem;
+      line-height: 1.7;
+    }
+
+    .inner-content h2 {
+      color: #000;
+      margin-bottom: 1rem;
+    }
+
+    .footer {
+      width: 100%;
+      text-align: center;
+      padding: 1rem 0;
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      font-size: 0.9rem;
+      margin-top: 2rem;
+    }
+
+    @media (max-width: 700px) {
+      .top-header {
+        height: 33vh;
+      }
+
+      .top-header h1 {
+        font-size: 2rem;
+      }
+
+      .white-box {
+        padding: 2rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="top-header">
+    <h1>About Me</h1>
+  </div>
+
+  <div class="content-wrapper">
+    <div class="white-box">
+      <div class="inner-content">
+        <h2>Short CV</h2>
+        <p>
+          I am a mathematics student currently pursuing my studies at ETH Zurich. My academic interests lie in mathematical physics, particularly in wave propagation, scattering theory, and spectral analysis.
+        </p>
+        <p>
+          My recent work involves using layer potential techniques to solve the Helmholtz scattering problem in periodic media. In addition, I have explored topics related to Toeplitz operators and their applications in spectral theory.
+        </p>
+        <p>
+          Outside of academia, I enjoy coding, collaborating on open-source projects, and deepening my understanding of the mathematical foundations behind physical phenomena.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2025 Yannick De Bruijn. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

@@ -9,10 +9,10 @@
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: url('Images/HannertTheis2.png') no-repeat center center fixed;
+      color: white;
+      background: url('Images/HannertTheis2.png') no-repeat center top fixed;
       background-size: cover;
       overflow-x: hidden;
-      color: white;
     }
 
     body::before {
@@ -23,15 +23,15 @@
       z-index: -1;
     }
 
-    .top-header {
-      height: 33vh;
+    .top-half {
+      height: 25vh;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
     }
 
-    .top-header h1 {
+    .top-half h1 {
       font-size: 3rem;
       margin: 0;
       padding: 0 20px;
@@ -39,7 +39,7 @@
     }
 
     .content-wrapper {
-      margin-top: -100px;
+      margin-top: -60px;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -61,11 +61,21 @@
       color: #111;
       font-size: 1.2rem;
       line-height: 1.7;
+      padding: 0 1rem;
     }
 
     .inner-content h2 {
       color: #000;
       margin-bottom: 1rem;
+    }
+
+    .inner-content a {
+      color: #0a9396;
+      text-decoration: none;
+    }
+
+    .inner-content a:hover {
+      text-decoration: underline;
     }
 
     .footer {
@@ -79,23 +89,27 @@
     }
 
     @media (max-width: 700px) {
-      .top-header {
+      .top-half {
         height: 33vh;
       }
 
-      .top-header h1 {
+      .top-half h1 {
         font-size: 2rem;
       }
 
       .white-box {
         padding: 2rem 1rem;
       }
+
+      .inner-content {
+        padding: 0 1rem;
+      }
     }
   </style>
 </head>
 <body>
 
-  <div class="top-header">
+  <div class="top-half">
     <h1>About Me</h1>
   </div>
 
@@ -104,13 +118,16 @@
       <div class="inner-content">
         <h2>Short CV</h2>
         <p>
-          I am a PhD student in computational and applied mathematics at the University of Oslo under the supervision of <a href="https://sites.google.com/view/e-o-hiltunen" target="_blank" rel="noopener noreferrer">Prof. Erik Orvehed Hiltunen</a>. Previously I was a master student at ETH Zurich, working under the supervison of  <a href="https://people.math.ethz.ch/~hammari/" target="_blank" rel="noopener noreferrer">Prof. Habib Ammari</a>.
+          I am a PhD student in computational and applied mathematics at the University of Oslo under the supervision of 
+          <a href="https://sites.google.com/view/e-o-hiltunen" target="_blank" rel="noopener noreferrer">Prof. Erik Orvehed Hiltunen</a>.
+          Previously I was a master student at ETH Zurich, working under the supervision of 
+          <a href="https://people.math.ethz.ch/~hammari/" target="_blank" rel="noopener noreferrer">Prof. Habib Ammari</a>.
         </p>
         <p>
-          My recent work involves studying the localisation pehonema in metamaterials and obtaining quantitaive localisation strength using the complex band structure.
+          My recent work involves studying the localisation phenomenon in metamaterials and obtaining quantitative localisation strength using the complex band structure.
         </p>
         <p>
-          Outside of academia, I enjoy natrue.
+          Outside of academia, I enjoy nature.
         </p>
       </div>
     </div>

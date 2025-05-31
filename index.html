@@ -177,24 +177,17 @@
       color: #111 !important;
     }
 
-     @media (max-width: 700px) {
-      .top-half {
-        padding-top: 0;           /* remove the fixed padding */
-        height: 50vh;             /* keep the height */
-        display: flex;
-        justify-content: center;  /* center horizontally */
-        align-items: center;      /* center vertically */
-        text-align: center;
-      }
+  @media (max-width: 700px) {
+    .top-half {
+      height: 50vh;           /* fixed height */
+      padding-top: 0 !important;  /* override any padding */
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      text-align: center;
     }
-    
-    @media (max-width: 700px) {
-      html, body {
-        background-size: contain;       /* Show entire image, may leave gaps */
-        background-position: center top; /* Adjust vertical position */
-        background-repeat: no-repeat;   /* Prevent tiling */
-      }
-    }
+  }
+
 
     
   </style>

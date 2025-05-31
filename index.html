@@ -124,6 +124,31 @@
       margin-top: 2rem;
     }
 
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(0, 0, 0, 0.3); /* subtle dark overlay */
+      z-index: 10;
+      box-sizing: border-box;
+    }
+    
+    .nav-container a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
+    
+    .nav-container a:hover {
+      color: #0a9396;
+    }
+
+
     .btn {
       background-color: #0a9396;
       border: none;
@@ -215,6 +240,15 @@
   </style>
 </head>
 <body>
+
+  <nav class="navbar">
+  <div class="nav-container">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="research.html">Research</a>
+  </div>
+</nav>
+
 
   <div class="top-half">
     <h1>Yannick De Bruijn</h1>

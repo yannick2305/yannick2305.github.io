@@ -70,22 +70,60 @@
       padding: 0 2rem;
       box-sizing: border-box;
       color: #111;
-      font-size: 1.2rem;
-      line-height: 1.7;
+      font-size: 1.1rem;
+      line-height: 1.6;
     }
 
     .inner-content h2 {
       color: #000;
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       font-size: 1.8rem;
+      text-align: center;
     }
 
-    .inner-content a {
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    li strong {
+      display: block;
+      font-size: 1.1rem;
+      color: #000;
+    }
+
+    .authors {
+      font-style: italic;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .year-journal {
+      margin-top: 5px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .links {
+      margin-top: 10px;
+    }
+
+    a {
       color: #0a9396;
       text-decoration: none;
+      font-weight: bold;
+      margin-right: 15px;
     }
 
-    .inner-content a:hover {
+    a:hover {
       text-decoration: underline;
     }
 
@@ -100,10 +138,6 @@
     }
 
     @media (max-width: 700px) {
-      .top-half {
-        padding-top: 10vh;
-      }
-
       .top-half h1 {
         font-size: 2.5rem;
       }
@@ -123,25 +157,46 @@
   <div class="content-wrapper">
     <div class="white-box">
       <div class="inner-content">
-        <h2>Current Research Interests</h2>
-        <p>
-          My research focuses on the propagation of waves in periodic and quasi-periodic structures, particularly in the context of <strong>metamaterials</strong>. These artificial media can exhibit exotic wave phenomena, including band gaps and strong localisation.
-        </p>
-        <p>
-          I investigate these behaviors using a combination of:
-          <ul>
-            <li><strong>Layer potential techniques</strong> for boundary value problems in complex geometries.</li>
-            <li>Scattering theory and the <strong>Helmholtz equation</strong>.</li>
-            <li>Spectral theory and the analysis of <strong>Toeplitz operators</strong>.</li>
-          </ul>
-        </p>
-        <h2>Recent Topics</h2>
-        <p>
-          I am currently working on understanding <strong>localisation effects</strong> in metamaterials, with an emphasis on quantifying them using the <em>complex band structure</em>. These techniques help assess how confined waves are within the material and how energy can be trapped or redirected.
-        </p>
-        <p>
-          My approach is analytical, but also supported by computational methods where appropriate.
-        </p>
+        <h2>Research Papers</h2>
+        <ul>
+          <li>
+            <strong>Complex Band Structure and localisation transition for tridiagonal non-Hermitian k-Toeplitz operators with defects</strong>
+            <div class="year-journal">2025</div>
+            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+            <div class="links">
+              <a href="https://arxiv.org/abs/2505.23610" target="_blank" rel="noopener noreferrer">Preprint</a>
+            </div>
+          </li>
+
+          <li>
+            <strong>Complex Brillouin Zone for Localised Modes in Hermitian and Non-Hermitian Problems</strong>
+            <div class="year-journal">2025</div>
+            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+            <div class="links">
+              <a href="https://arxiv.org/abs/2502.06620" target="_blank" rel="noopener noreferrer">Preprint</a>
+            </div>
+          </li>
+
+          <li>
+            <strong>Complex Band Structure for Subwavelength Evanescent Waves</strong>
+            <div class="year-journal">2025, <em>Studies in Applied Mathematics</em></div>
+            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+            <div class="links">
+              <a href="https://doi.org/10.1111/sapm.70022" target="_blank" rel="noopener noreferrer">Published Paper</a>
+              <a href="https://arxiv.org/abs/2409.14537" target="_blank" rel="noopener noreferrer">Preprint</a>
+            </div>
+          </li>
+
+          <li>
+            <strong>Spectra and pseudo-spectra of tridiagonal k-Toeplitz matrices and the topological origin of the non-Hermitian skin effect</strong>
+            <div class="year-journal">2025, <em>Journal of Physics A: Mathematical and Theoretical</em></div>
+            <div class="authors">Habib Ammari, Silvio Barandun, Yannick De Bruijn, Ping Liu, and Clemens Thalhammer</div>
+            <div class="links">
+              <a href="https://iopscience.iop.org/article/10.1088/1751-8121/add5ab" target="_blank" rel="noopener noreferrer">Published Paper</a>
+              <a href="https://arxiv.org/abs/2401.12626" target="_blank" rel="noopener noreferrer">Preprint</a>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
   </div>

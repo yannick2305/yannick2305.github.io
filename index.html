@@ -186,20 +186,18 @@ html, body {
 
 @media (max-width: 700px) {
   html, body {
-    background-size: contain; /* zoom out on mobile */
-    background-position: center center;
+    background-size: contain; /* zoom out background */
+    background-position: center top; /* ensure background starts at top */
+  }
+
+  .top-half {
+    height: 100vh; /* keep full viewport height */
   }
 
   .top-half h1 {
-    font-size: 2.0rem; /* smaller font to fit in one line */
-    padding-top: 0;     /* reset any top padding so it’s vertically centered */
-    height: 50vh;       /* keep the section height consistent */
-    display: flex;
-    justify-content: center;
-    align-items: center; /* vertical centering */
+    font-size: 2.5rem; /* smaller font for mobile */
   }
 }
-
 
 
     

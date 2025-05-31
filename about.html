@@ -10,63 +10,74 @@
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: white;
-      background: url('Images/HannertTheis2.png') no-repeat center top fixed;
-      background-size: cover;
+      background: none;
       overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: -1;
+      height: 100%;
     }
 
     .top-half {
+      position: relative;
       height: 25vh;
+      background: url('Images/HannertTheis4.png') no-repeat center center;
+      background-size: cover;
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-start;
+      padding-top: 10vh;
       text-align: center;
+      color: white;
+      z-index: 1;
+    }
+
+    .top-half::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.2);
+      z-index: -1;
     }
 
     .top-half h1 {
-      font-size: 3rem;
+      font-size: 5rem;
       margin: 0;
       padding: 0 20px;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+      position: relative;
+      z-index: 2;
     }
 
     .content-wrapper {
-      margin-top: -60px;
       width: 100%;
       display: flex;
       justify-content: center;
+      padding: 2rem 0;
       box-sizing: border-box;
     }
 
     .white-box {
       width: 100%;
       background-color: rgba(255, 255, 255, 0.95);
-      padding: 3rem 1rem;
+      padding: 2rem 0;
       box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
       box-sizing: border-box;
-      min-height: 60vh;
+      min-height: 50vh;
     }
 
     .inner-content {
+      width: 100%;
       max-width: 800px;
       margin: 0 auto;
+      padding: 0 2rem;
+      box-sizing: border-box;
       color: #111;
       font-size: 1.2rem;
       line-height: 1.7;
-      padding: 0 1rem;
     }
 
     .inner-content h2 {
       color: #000;
       margin-bottom: 1rem;
+      font-size: 1.8rem;
     }
 
     .inner-content a {
@@ -90,15 +101,11 @@
 
     @media (max-width: 700px) {
       .top-half {
-        height: 33vh;
+        padding-top: 10vh;
       }
 
       .top-half h1 {
-        font-size: 2rem;
-      }
-
-      .white-box {
-        padding: 2rem 1rem;
+        font-size: 2.5rem;
       }
 
       .inner-content {
@@ -118,9 +125,9 @@
       <div class="inner-content">
         <h2>Short CV</h2>
         <p>
-          I am a PhD student in computational and applied mathematics at the University of Oslo under the supervision of 
+          I am a PhD student in computational and applied mathematics at the University of Oslo under the supervision of
           <a href="https://sites.google.com/view/e-o-hiltunen" target="_blank" rel="noopener noreferrer">Prof. Erik Orvehed Hiltunen</a>.
-          Previously I was a master student at ETH Zurich, working under the supervision of 
+          Previously I was a master student at ETH Zurich, working under the supervision of
           <a href="https://people.math.ethz.ch/~hammari/" target="_blank" rel="noopener noreferrer">Prof. Habib Ammari</a>.
         </p>
         <p>

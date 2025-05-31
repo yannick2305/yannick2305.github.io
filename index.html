@@ -180,20 +180,23 @@
       text-align: justify;
     }
 
-@media (max-width: 700px) {
-  .top-half {
-    height: 50vh;           /* fixed height */
-    padding-top: 0 !important;  /* override any padding */
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    text-align: center;
-  }
+html, body {
+  background-size: cover; /* default desktop */
 }
 
-    @media (max-width: 700px) {
+@media (max-width: 700px) {
+  html, body {
+    background-size: contain; /* zoom out on mobile */
+    background-position: center center;
+  }
+
   .top-half h1 {
-    font-size: 2.5rem; /* smaller font size for mobile */
+    font-size: 2.0rem; /* smaller font to fit in one line */
+    padding-top: 0;     /* reset any top padding so it’s vertically centered */
+    height: 50vh;       /* keep the section height consistent */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* vertical centering */
   }
 }
 

@@ -125,18 +125,43 @@
     }
 
     @media (max-width: 700px) {
+      html, body {
+        height: 100%;
+      }
+    
       .top-half {
         padding-top: 10vh;
       }
-
+    
       .top-half h1 {
         font-size: 2.5rem;
       }
-
-      .inner-content {
-        padding: 0 1rem;
+    
+      .info-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    
+      .description-box {
+        padding: 0;
+      }
+    
+      .content-wrapper {
+        padding: 1rem 0 2rem 0;
+      }
+    
+      .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    
+      .nav-container a {
+        font-size: 0.85rem;   /* Smaller font on mobile */
+        margin-left: 1rem;    /* Slightly tighter spacing */
       }
     }
+
   </style>
 </head>
 <body>

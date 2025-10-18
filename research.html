@@ -90,9 +90,20 @@
     li {
       margin-bottom: 30px;
       padding: 20px;
-      background: white;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: white;
+    }
+
+    /* Colored variants for framed items */
+    .paper-item {
+      background: rgba(173, 216, 230, 0.25); /* light blue tint */
+      border-left: 5px solid #0a9396;
+    }
+
+    .repo-item {
+      background: rgba(144, 238, 144, 0.25); /* light green tint */
+      border-left: 5px solid #52b788;
     }
 
     li strong {
@@ -129,29 +140,28 @@
     }
 
     .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: flex-end;
-    background: rgba(0, 0, 0, 0.3); /* subtle dark overlay */
-    z-index: 10;
-    box-sizing: border-box;
-  }
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      background: rgba(0, 0, 0, 0.3);
+      z-index: 10;
+      box-sizing: border-box;
+    }
   
-  .nav-container a {
-    color: #fff;
-    text-decoration: none;
-    margin-left: 2rem;
-    font-weight: bold;
-    transition: color 0.2s ease;
-  }
+    .nav-container a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 2rem;
+      font-weight: bold;
+      transition: color 0.2s ease;
+    }
   
-  .nav-container a:hover {
-    color: #0a9396;
-  }
-
+    .nav-container a:hover {
+      color: #0a9396;
+    }
 
     .footer {
       width: 100%;
@@ -163,56 +173,54 @@
       margin-top: 2rem;
     }
 
-@media (max-width: 700px) {
-  html, body {
-    height: 100%;
-  }
+    @media (max-width: 700px) {
+      html, body {
+        height: 100%;
+      }
 
-  .top-half {
-    padding-top: 15vh;
-  }
+      .top-half {
+        padding-top: 15vh;
+      }
 
-  .top-half h1 {
-    font-size: 2.5rem;
-  }
+      .top-half h1 {
+        font-size: 2.5rem;
+      }
 
-  .info-row {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+      .info-row {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
 
-  .description-box {
-    padding: 0;
-  }
+      .description-box {
+        padding: 0;
+      }
 
-  .content-wrapper {
-    padding: 1rem 0 2rem 0;
-  }
+      .content-wrapper {
+        padding: 1rem 0 2rem 0;
+      }
 
-  .navbar {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+      .navbar {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
 
-  .nav-container a {
-    font-size: 0.85rem;   /* Smaller font on mobile */
-    margin-left: 1rem;    /* Slightly tighter spacing */
-  }
-}
-
+      .nav-container a {
+        font-size: 0.85rem;
+        margin-left: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <nav class="navbar">
-  <div class="nav-container">
-    <a href="/">Home</a>
-    <a href="about.html">About</a>
-    <a href="research.html">Research</a>
-  </div>
-</nav>
-
+    <div class="nav-container">
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+    </div>
+  </nav>
 
   <div class="top-half">
     <h1>My Research</h1>
@@ -223,7 +231,7 @@
       <div class="inner-content">
         <h2>Research Papers</h2>
         <ul>
-          <li>
+          <li class="paper-item">
             <strong>Complex Band Structure and localisation transition for tridiagonal non-Hermitian k-Toeplitz operators with defects</strong>
             <div class="year-journal">2025</div>
             <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
@@ -232,7 +240,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="paper-item">
             <strong>Complex Brillouin Zone for Localised Modes in Hermitian and Non-Hermitian Problems</strong>
             <div class="year-journal">2025</div>
             <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
@@ -241,7 +249,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="paper-item">
             <strong>Complex Band Structure for Subwavelength Evanescent Waves</strong>
             <div class="year-journal">2025, <em>Studies in Applied Mathematics</em></div>
             <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
@@ -251,7 +259,7 @@
             </div>
           </li>
 
-          <li>
+          <li class="paper-item">
             <strong>Spectra and pseudo-spectra of tridiagonal k-Toeplitz matrices and the topological origin of the non-Hermitian skin effect</strong>
             <div class="year-journal">2025, <em>Journal of Physics A: Mathematical and Theoretical</em></div>
             <div class="authors">Habib Ammari, Silvio Barandun, Yannick De Bruijn, Ping Liu, and Clemens Thalhammer</div>
@@ -263,35 +271,62 @@
         </ul>
 
         <h2>Code Repositories</h2>
-          <ul>
-          
-            <li>
-              <strong>Localisation transition in non-Hermitian systems</strong>
-              <div class="year-journal">2025 — MATLAB</div>
-              <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen.</div>
-              <div class="links">
-                <a href="https://github.com/yannick2305/Non-Hermitian-Localisation" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
-            </li>
+        <ul>
+          <li class="repo-item">
+            <strong>Localisation transition in non-Hermitian systems</strong>
+            <div class="year-journal">2025 — MATLAB</div>
+            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen.</div>
+            <div class="links">
+              <a href="https://github.com/yannick2305/Non-Hermitian-Localisation" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </li>
 
-            <li>
-              <strong>Complex Band structure for the 1D & 2D Helmholtz scattering problem</strong>
-              <div class="year-journal">2025 — MATLAB</div>
-              <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen.</div>
-              <div class="links">
-                <a href="https://github.com/yannick2305/PhotonicBandGaps" target="_blank" rel="noopener noreferrer">GitHub</a>
-              </div>
-            </li>
+          <li class="repo-item">
+            <strong>Complex Band structure for the 1D & 2D Helmholtz scattering problem</strong>
+            <div class="year-journal">2025 — MATLAB</div>
+            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen.</div>
+            <div class="links">
+              <a href="https://github.com/yannick2305/PhotonicBandGaps" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </div>
+          </li>
 
-             <li>
-              <strong>Topological Origin of the non-Hermitian skin effect</strong>
-              <div class="year-journal">2024 — Python</div>
-              <div class="authors">Yannick De Bruijn.</div>
-              <div class="links">
-                <a href="https://doi.org/10.5281/zenodo.15083489" target="_blank" rel="noopener noreferrer">Zenodo</a>
-              </div>
-            </li>
-          </ul>
+          <li class="repo-item">
+            <strong>Topological Origin of the non-Hermitian skin effect</strong>
+            <div class="year-journal">2024 — Python</div>
+            <div class="authors">Yannick De Bruijn.</div>
+            <div class="links">
+              <a href="https://doi.org/10.5281/zenodo.15083489" target="_blank" rel="noopener noreferrer">Zenodo</a>
+            </div>
+          </li>
+        </ul>
+
+        <h2>Invited Talks</h2>
+        <ul>
+          <li>
+            <strong>[Talk Title 1]</strong>
+            <div class="year-journal">[Year] — [Event/Institution]</div>
+            <div class="authors">[Location or Co-speakers, if applicable]</div>
+          </li>
+
+          <li>
+            <strong>[Talk Title 2]</strong>
+            <div class="year-journal">[Year] — [Event/Institution]</div>
+            <div class="authors">[Location or Co-speakers, if applicable]</div>
+          </li>
+
+          <li>
+            <strong>[Talk Title 3]</strong>
+            <div class="year-journal">[Year] — [Event/Institution]</div>
+            <div class="authors">[Location or Co-speakers, if applicable]</div>
+          </li>
+
+          <li>
+            <strong>[Talk Title 4]</strong>
+            <div class="year-journal">[Year] — [Event/Institution]</div>
+            <div class="authors">[Location or Co-speakers, if applicable]</div>
+          </li>
+        </ul>
+
       </div>
     </div>
   </div>

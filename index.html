@@ -89,7 +89,7 @@
     }
 
     .description-box h2 {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: bold;
       margin-bottom: 15px;
       border-bottom: 1px solid #ccc;
@@ -99,7 +99,7 @@
     }
 
     .description-box p {
-      font-size: 18px;
+      font-size: 14px;
       line-height: 1.6;
       text-align: justify;
       margin: 0;
@@ -112,6 +112,51 @@
       border: 1px solid #ccc;
       flex-shrink: 0;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .entry {
+      margin-bottom: 25px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .entry::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .entry-title {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .entry-authors {
+      font-style: italic;
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    .entry-meta {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .entry-meta a {
+      color: #0a9396;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+
+    .entry-meta a:hover {
+      text-decoration: underline;
+    }
+
+    .bracket {
+      color: #666;
     }
 
     .contact-box {
@@ -155,6 +200,8 @@
       background: rgba(0, 0, 0, 0.3);
       z-index: 10;
       box-sizing: border-box;
+      opacity: 0;
+      pointer-events: none;
     }
 
     .nav-container a {
@@ -256,6 +303,95 @@
             </p>
           </div>
           <img src="Images/MyPicture.png" alt="Yannick De Bruijn" class="selfie" />
+        </div>
+
+        <div class="description-box">
+          <h2>Short CV</h2>
+          <p>
+            I am a PhD student in Computational and Applied Mathematics at the <a href="https://www.mn.uio.no/math/english/research/groups/cm/index.html" target="_blank" rel="noopener noreferrer">University of Oslo</a>, under the supervision of
+            <a href="https://sites.google.com/view/e-o-hiltunen" target="_blank" rel="noopener noreferrer">Prof. Erik Orvehed Hiltunen</a>.
+            Previously, I was a master's student at <a href="https://math.ethz.ch/sam" target="_blank" rel="noopener noreferrer">ETH Zurich</a>, where I worked under the supervision of
+            <a href="https://people.math.ethz.ch/~hammari/" target="_blank" rel="noopener noreferrer">Prof. Habib Ammari</a>. During my master's degree I was also a Visiting Scholar in Applied Mathematics at <a href="https://catalog.yale.edu/ycps/subjects-of-instruction/applied-mathematics/" target="_blank" rel="noopener noreferrer">Yale University</a>.
+          </p>
+          <p>
+            My recent work involves studying the localisation phenomenon in metamaterials and quantitatively analysing localisation properties using the complex band structure.
+          </p>
+        </div>
+
+        <div class="description-box">
+          <h2>Publications</h2>
+
+          <div class="entry">
+            <div class="entry-title">Spectra and pseudospectra of non-Hermitian Toeplitz operators: Eigenvector decay transitions in banded and dense matrices</div>
+            <div class="entry-authors">Yannick De Bruijn, Bryn Davies, Sacha Dupuy and Erik Orvehed Hiltunen</div>
+            <div class="entry-meta">Preprint (2025) <span class="bracket">[</span><a href="https://arxiv.org/abs/2505.23610" target="_blank">Preprint</a><span class="bracket">]</span></div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-title">Complex Band Structure and localisation transition for tridiagonal non-Hermitian k-Toeplitz operators with defects</div>
+            <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+            <div class="entry-meta">Preprint (2025) <span class="bracket">[</span><a href="https://arxiv.org/abs/2505.23610" target="_blank">Preprint</a><span class="bracket">]</span></div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-title">Complex Brillouin Zone for Localised Modes in Hermitian and Non-Hermitian Problems</div>
+            <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+            <div class="entry-meta">Preprint (2025) <span class="bracket">[</span><a href="https://arxiv.org/abs/2502.06620" target="_blank">Preprint</a><span class="bracket">]</span></div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-title">Complex Band Structure for Subwavelength Evanescent Waves</div>
+            <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+            <div class="entry-meta">Studies in Applied Mathematics (2025) <span class="bracket">[</span><a href="https://doi.org/10.1111/sapm.70022" target="_blank">Paper</a><span class="bracket">]</span> <span class="bracket">[</span><a href="https://arxiv.org/abs/2409.14537" target="_blank">Preprint</a><span class="bracket">]</span></div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-title">Spectra and pseudo-spectra of tridiagonal k-Toeplitz matrices and the topological origin of the non-Hermitian skin effect</div>
+            <div class="entry-authors">Habib Ammari, Silvio Barandun, Yannick De Bruijn, Ping Liu, and Clemens Thalhammer</div>
+            <div class="entry-meta">Journal of Physics A: Mathematical and Theoretical (2025) <span class="bracket">[</span><a href="https://iopscience.iop.org/article/10.1088/1751-8121/add5ab" target="_blank">Paper</a><span class="bracket">]</span> <span class="bracket">[</span><a href="https://arxiv.org/abs/2401.12626" target="_blank">Preprint</a><span class="bracket">]</span></div>
+          </div>
+        </div>
+
+        <div class="description-box">
+          <h2>Code & Data</h2>
+
+          <div class="entry">
+            <div class="entry-title">Spectra of non-Hermitian m-banded Toeplitz operators</div>
+            <div class="entry-authors">Yannick De Bruijn</div>
+            <div class="entry-meta">MATLAB code (2025) <span class="bracket">[</span><a href="https://github.com/yannick2305/BandedToeplitz" target="_blank">GitHub</a><span class="bracket">]</span></div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-title">Localisation transition in non-Hermitian systems</div>
+            <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+            <div class="entry-meta">MATLAB code (2025) <span class="bracket">[</span><a href="https://github.com/yannick2305/Non-Hermitian-Localisation" target="_blank">GitHub</a><span class="bracket">]</span></div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-title">Complex Band structure for the 1D & 2D Helmholtz scattering problem</div>
+            <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+            <div class="entry-meta">MATLAB code (2025) <span class="bracket">[</span><a href="https://github.com/yannick2305/PhotonicBandGaps" target="_blank">GitHub</a><span class="bracket">]</span></div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-title">Topological Origin of the non-Hermitian skin effect</div>
+            <div class="entry-authors">Yannick De Bruijn</div>
+            <div class="entry-meta">Python code (2025) <span class="bracket">[</span><a href="https://doi.org/10.5281/zenodo.15083489" target="_blank">Zenodo</a><span class="bracket">]</span></div>
+          </div>
+        </div>
+
+        <div class="description-box">
+          <h2>Invited Talks</h2>
+
+          <div class="entry">
+            <div class="entry-title">Wave localisation in periodic media</div>
+            <div class="entry-meta">Departmental Seminar, University of Oslo (31 October 2025) <span class="bracket">[</span><a href="Seminar_Talk_Oslo_2025.pdf" target="_blank">Slides</a><span class="bracket">]</span></div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-title">Complex Band Structure in the Spectral Theory of Toeplitz Operators and Applications to Metamaterials</div>
+            <div class="entry-meta">Mathematical Methods in Electromagnetics Workshop, KTH Stockholm (9 October 2025) <span class="bracket">[</span><a href="SlidesStockholm.pdf" target="_blank">Slides</a><span class="bracket">]</span> <span class="bracket">[</span><a href="WorkshopStockholm.pdf" target="_blank">Workshop Info</a><span class="bracket">]</span></div>
+          </div>
         </div>
 
         <div class="contact-box">

@@ -9,8 +9,8 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: white;
+      font-family: 'Computer Modern', 'Times New Roman', Times, serif;
+      color: #000;
       background: none;
       overflow-x: hidden;
       height: 100%;
@@ -47,98 +47,6 @@
       z-index: 2;
     }
 
-    .content-wrapper {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      padding: 2rem 0;
-      box-sizing: border-box;
-    }
-
-    .white-box {
-      width: 100%;
-      background-color: rgba(255, 255, 255, 0.95);
-      padding: 2rem 0;
-      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.2);
-      min-height: 50vh;
-    }
-
-    .inner-content {
-      width: 100%;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 0 2rem;
-      color: #111;
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-
-    .inner-content h2 {
-      color: #000;
-      margin-bottom: 1.5rem;
-      font-size: 1.8rem;
-      text-align: center;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.4rem;
-    }
-
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    li {
-      margin-bottom: 30px;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    /* Color-coded sections */
-    .paper-item {
-      background: rgba(173, 216, 230, 0.25);
-      border-left: 5px solid #0a9396;
-    }
-
-    .repo-item {
-      background: rgba(144, 238, 144, 0.25);
-      border-left: 5px solid #52b788;
-    }
-
-    .talk-item {
-      background: rgba(255, 213, 128, 0.35);
-      border-left: 5px solid #e3a008;
-    }
-
-    li strong {
-      display: block;
-      font-size: 1.1rem;
-      color: #000;
-    }
-
-    .authors {
-      font-style: italic;
-      color: #555;
-      margin-top: 5px;
-    }
-
-    .year-journal {
-      margin-top: 5px;
-      color: #666;
-      font-size: 0.95rem;
-    }
-
-    .year-journal a {
-      color: #0a9396;
-      text-decoration: none;
-      font-weight: bold;
-      margin-left: 10px;
-    }
-
-    .year-journal a:hover {
-      text-decoration: underline;
-    }
-
     .navbar {
       position: fixed;
       top: 0;
@@ -163,6 +71,87 @@
       color: #0a9396;
     }
 
+    .content-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 0;
+      box-sizing: border-box;
+      background-color: #f5f5f0;
+    }
+
+    .container {
+      max-width: 850px;
+      width: 100%;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 40px 60px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      min-height: 50vh;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .entry {
+      margin-bottom: 25px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .entry::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+
+    .entry-title {
+      font-weight: bold;
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .entry-authors {
+      font-style: italic;
+      font-size: 13px;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    .entry-meta {
+      font-size: 13px;
+      color: #555;
+    }
+
+    .entry-meta a {
+      color: #00e;
+      text-decoration: none;
+      margin-left: 8px;
+    }
+
+    .entry-meta a:visited {
+      color: #551a8b;
+    }
+
+    .entry-meta a:hover {
+      text-decoration: underline;
+    }
+
+    .bracket {
+      color: #666;
+    }
+
     .footer {
       width: 100%;
       text-align: center;
@@ -171,6 +160,12 @@
       color: #333;
       font-size: 0.9rem;
       margin-top: 2rem;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        padding: 30px 30px;
+      }
     }
 
     @media (max-width: 700px) {
@@ -186,6 +181,10 @@
       .nav-container a {
         font-size: 0.85rem;
         margin-left: 1rem;
+      }
+
+      .container {
+        padding: 20px 15px;
       }
     }
   </style>
@@ -206,109 +205,78 @@
   </div>
 
   <div class="content-wrapper">
-    <div class="white-box">
-      <div class="inner-content">
+    <div class="container">
 
-        <h2>Research Papers</h2>
-        <ul>
-          <li class="paper-item">
-            <strong>Complex Band Structure and localisation transition for tridiagonal non-Hermitian k-Toeplitz operators with defects</strong>
-            <div class="year-journal">2025
-              <a href="https://arxiv.org/abs/2505.23610" target="_blank">Preprint</a>
-            </div>
-            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
-          </li>
+      <section>
+        <h2>Publications</h2>
 
-          <li class="paper-item">
-            <strong>Complex Brillouin Zone for Localised Modes in Hermitian and Non-Hermitian Problems</strong>
-            <div class="year-journal">2025
-              <a href="https://arxiv.org/abs/2502.06620" target="_blank">Preprint</a>
-            </div>
-            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
-          </li>
+        <div class="entry">
+          <div class="entry-title">Complex Band Structure and localisation transition for tridiagonal non-Hermitian k-Toeplitz operators with defects</div>
+          <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+          <div class="entry-meta">Preprint (2025) <span class="bracket">[</span><a href="https://arxiv.org/abs/2505.23610" target="_blank">Preprint</a><span class="bracket">]</span></div>
+        </div>
 
-          <li class="paper-item">
-            <strong>Complex Band Structure for Subwavelength Evanescent Waves</strong>
-            <div class="year-journal">2025, <em>Studies in Applied Mathematics</em>
-              <a href="https://doi.org/10.1111/sapm.70022" target="_blank">Published Paper</a>
-              <a href="https://arxiv.org/abs/2409.14537" target="_blank">Preprint</a>
-            </div>
-            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
-          </li>
+        <div class="entry">
+          <div class="entry-title">Complex Brillouin Zone for Localised Modes in Hermitian and Non-Hermitian Problems</div>
+          <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+          <div class="entry-meta">Preprint (2025) <span class="bracket">[</span><a href="https://arxiv.org/abs/2502.06620" target="_blank">Preprint</a><span class="bracket">]</span></div>
+        </div>
 
-          <li class="paper-item">
-            <strong>Spectra and pseudo-spectra of tridiagonal k-Toeplitz matrices and the topological origin of the non-Hermitian skin effect</strong>
-            <div class="year-journal">2025, <em>Journal of Physics A: Mathematical and Theoretical</em>
-              <a href="https://iopscience.iop.org/article/10.1088/1751-8121/add5ab" target="_blank">Published Paper</a>
-              <a href="https://arxiv.org/abs/2401.12626" target="_blank">Preprint</a>
-            </div>
-            <div class="authors">Habib Ammari, Silvio Barandun, Yannick De Bruijn, Ping Liu, and Clemens Thalhammer</div>
-          </li>
-        </ul>
+        <div class="entry">
+          <div class="entry-title">Complex Band Structure for Subwavelength Evanescent Waves</div>
+          <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+          <div class="entry-meta">Studies in Applied Mathematics (2025) <span class="bracket">[</span><a href="https://doi.org/10.1111/sapm.70022" target="_blank">Paper</a><span class="bracket">]</span> <span class="bracket">[</span><a href="https://arxiv.org/abs/2409.14537" target="_blank">Preprint</a><span class="bracket">]</span></div>
+        </div>
 
-        <h2>Code Repositories</h2>
-        <ul>
+        <div class="entry">
+          <div class="entry-title">Spectra and pseudo-spectra of tridiagonal k-Toeplitz matrices and the topological origin of the non-Hermitian skin effect</div>
+          <div class="entry-authors">Habib Ammari, Silvio Barandun, Yannick De Bruijn, Ping Liu, and Clemens Thalhammer</div>
+          <div class="entry-meta">Journal of Physics A: Mathematical and Theoretical (2025) <span class="bracket">[</span><a href="https://iopscience.iop.org/article/10.1088/1751-8121/add5ab" target="_blank">Paper</a><span class="bracket">]</span> <span class="bracket">[</span><a href="https://arxiv.org/abs/2401.12626" target="_blank">Preprint</a><span class="bracket">]</span></div>
+        </div>
+      </section>
 
-          <li class="repo-item">
-            <strong>Spectra of non-Hermitian m-banded Toeplitz operators </strong>
-            <div class="year-journal">2025 — MATLAB
-              <a href="https://github.com/yannick2305/BandedToeplitz" target="_blank">GitHub</a>
-            </div>
-            <div class="author">Yannick De Bruijn </div>
-          </li>
-          
-          <li class="repo-item">
-            <strong>Localisation transition in non-Hermitian systems</strong>
-            <div class="year-journal">2025 — MATLAB
-              <a href="https://github.com/yannick2305/Non-Hermitian-Localisation" target="_blank">GitHub</a>
-            </div>
-            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
-          </li>
+      <section>
+        <h2>Code & Data</h2>
 
-          <li class="repo-item">
-            <strong>Complex Band structure for the 1D & 2D Helmholtz scattering problem</strong>
-            <div class="year-journal">2025 — MATLAB
-              <a href="https://github.com/yannick2305/PhotonicBandGaps" target="_blank">GitHub</a>
-            </div>
-            <div class="authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
-          </li>
+        <div class="entry">
+          <div class="entry-title">Spectra of non-Hermitian m-banded Toeplitz operators</div>
+          <div class="entry-authors">Yannick De Bruijn</div>
+          <div class="entry-meta">MATLAB code (2025) <span class="bracket">[</span><a href="https://github.com/yannick2305/BandedToeplitz" target="_blank">GitHub</a><span class="bracket">]</span></div>
+        </div>
 
-          <li class="repo-item">
-            <strong>Topological Origin of the non-Hermitian skin effect</strong>
-            <div class="year-journal">2025 — Python
-              <a href="https://doi.org/10.5281/zenodo.15083489" target="_blank">Zenodo</a>
-            </div>
-            <div class="authors">Yannick De Bruijn</div>
-          </li>
-        </ul>
+        <div class="entry">
+          <div class="entry-title">Localisation transition in non-Hermitian systems</div>
+          <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+          <div class="entry-meta">MATLAB code (2025) <span class="bracket">[</span><a href="https://github.com/yannick2305/Non-Hermitian-Localisation" target="_blank">GitHub</a><span class="bracket">]</span></div>
+        </div>
 
+        <div class="entry">
+          <div class="entry-title">Complex Band structure for the 1D & 2D Helmholtz scattering problem</div>
+          <div class="entry-authors">Yannick De Bruijn and Erik Orvehed Hiltunen</div>
+          <div class="entry-meta">MATLAB code (2025) <span class="bracket">[</span><a href="https://github.com/yannick2305/PhotonicBandGaps" target="_blank">GitHub</a><span class="bracket">]</span></div>
+        </div>
+
+        <div class="entry">
+          <div class="entry-title">Topological Origin of the non-Hermitian skin effect</div>
+          <div class="entry-authors">Yannick De Bruijn</div>
+          <div class="entry-meta">Python code (2025) <span class="bracket">[</span><a href="https://doi.org/10.5281/zenodo.15083489" target="_blank">Zenodo</a><span class="bracket">]</span></div>
+        </div>
+      </section>
+
+      <section>
         <h2>Invited Talks</h2>
-        <ul>
-          <li class="talk-item">
-            <strong>
-            Wave localisation in periodic media
-            <a href="Seminar_Talk_Oslo_2025.pdf" target="_blank" style="font-size:0.9em; margin-left:4px;">(Slides)</a>
-            </strong>
-            <div class="year-journal">31 October 2025 — University of Oslo</div>
-            <div class="authors">Departmental Seminar</div>
-          </li>
 
-          <li class="talk-item">
-            <strong>
-              Complex Band Structure in the Spectral Theory of Toeplitz Operators and Applications to Metamaterials
-              <a href="SlidesStockholm.pdf" target="_blank" style="font-size:0.9em; margin-left:4px;">(Slides)</a>
-            </strong>
-            <div class="year-journal">
-              9 October 2025 — KTH Stockholm
-            </div>
-            <div class="authors">Mathematical Methods in Electromagnetics Workshop <a href="WorkshopStockholm.pdf" target="_blank" style="font-size:0.9em; margin-left:4px;">(Link)</a></div>
-          </li>
+        <div class="entry">
+          <div class="entry-title">Wave localisation in periodic media</div>
+          <div class="entry-meta">Departmental Seminar, University of Oslo (31 October 2025) <span class="bracket">[</span><a href="Seminar_Talk_Oslo_2025.pdf" target="_blank">Slides</a><span class="bracket">]</span></div>
+        </div>
 
+        <div class="entry">
+          <div class="entry-title">Complex Band Structure in the Spectral Theory of Toeplitz Operators and Applications to Metamaterials</div>
+          <div class="entry-meta">Mathematical Methods in Electromagnetics Workshop, KTH Stockholm (9 October 2025) <span class="bracket">[</span><a href="SlidesStockholm.pdf" target="_blank">Slides</a><span class="bracket">]</span> <span class="bracket">[</span><a href="WorkshopStockholm.pdf" target="_blank">Workshop Info</a><span class="bracket">]</span></div>
+        </div>
+      </section>
 
-          
-        </ul>
-
-      </div>
     </div>
   </div>
 

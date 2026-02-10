@@ -119,14 +119,14 @@
     }
 
     .entry {
-      margin-bottom: 25px;
+      margin-bottom: 10px;
       padding-left: 20px;
       position: relative;
     }
 
     .entry::before {
       counter-increment: entry;
-      content: "[" counter(entry) "]";
+      content: "[" counter(entry) "] ";
       position: absolute;
       left: 0;
       top: 0;
@@ -377,6 +377,8 @@
         <div class="description-box">
           <h2>Code & Data</h2>
 
+          <div class="entries">
+
           <div class="entry">
             <div class="entry-title">Mathematical Foundation for the Generalised Brillouin zone</div>
             <div class="entry-authors">Yannick de Bruijn</div>
@@ -408,6 +410,8 @@
             <div class="entry-meta">Python code (2025) <span class="bracket">[</span><a href="https://doi.org/10.5281/zenodo.15083489" target="_blank">Zenodo</a><span class="bracket">]</span></div>
           </div>
         </div>
+
+          </div>
 
 <div class="description-box">
   <h2>Invited Talks</h2>

@@ -115,7 +115,7 @@
     }
 
     .entries {
-    counter-reset: entry;
+      counter-reset: entry 5; /* set to number of entries */
     }
 
     .entry {
@@ -124,8 +124,9 @@
       position: relative;
     }
 
+
     .entry::before {
-      counter-increment: entry;
+      counter-increment: entry -1;
       content: "[" counter(entry) "] ";
       position: absolute;
       left: 0;
@@ -332,8 +333,7 @@
         <div class="description-box">
           <h2>Publications</h2>
 
-          <div class="entries">
-
+          <section class="entries" style="counter-reset: entry 6">
 
           <div class="entry">
             <div class="entry-title">Mathematical Foundation for the Generalised Brillouin zone of m-banded Toeplitz operators.</div>

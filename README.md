@@ -1,1 +1,1 @@
-# Yannick De Bruijn
+# Yannick de Bruijn
